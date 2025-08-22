@@ -6,9 +6,23 @@ function Hero() {
     "/demics3.mp4",
     "/demics4.mp4",
     "/demics2.jpg",
+    "/happy-kids.jpg",
+    "/Demicstechh2.jpg",
+    "/happy-kids2.jpg",
+    "/demicstech.jpg"
+  ];
+
+  const messages = [
+    "At DemicsTech we harness the power of artificial intelligence to predict infectious disease in Nigeria.",
+    "We map infectious diseases community by community.",
+    "We reach out to those communities.",
+    "We say no to infectious disease outbreaks in Nigeria.",
+    "We break the cycle of outbreaks.",
+    "We prevent tomorrow’s outbreaks today"
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [currentMessage, setCurrentMessage] = useState(0);
 
   const handleNext = () => {
     setCurrentIndex((prev) => (prev + 1) % slides.length);
@@ -20,16 +34,25 @@ function Hero() {
 
   const isVideo = slides[currentIndex].endsWith('.mp4');
 
+  // Slide changer
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentIndex((prev) => (prev + 1) % slides.length);
-    }, 3000);
+    }, 4000);
     return () => clearInterval(interval);
   }, []);
 
+  // Message changer
+  useEffect(() => {
+    const textInterval = setInterval(() => {
+      setCurrentMessage((prev) => (prev + 1) % messages.length);
+    }, 3000);
+    return () => clearInterval(textInterval);
+  }, []);
+
   return (
-    <div className='w-full h-auto relative '>
-      {/* Desktop View: Video + Overlay Text */}
+    <div className='w-full h-auto relative'>
+      {/* Desktop View */}
       <div className='hidden lg:block relative w-full h-[600px]'>
         {isVideo ? (
           <video
@@ -47,18 +70,16 @@ function Hero() {
           />
         )}
 
-        {/* Overlay Text */}
+        {/* Overlay Animated Text */}
         <div className='absolute inset-0 flex items-center justify-end pr-40'>
-          <div className='  bg-white/80 backdrop-blur-md shadow-[0_0_40px_20px_rgba(0,0,0,0.3)] rounded-lg p-10 max-w-2xl'>
-            <h1 className='font-bold  text-4xl mb-4 text-black'>
-              Leveraging AI to Combat Infectious Diseases in Nigeria
+          <div className='bg-white/80 backdrop-blur-md shadow-[0_0_40px_20px_rgba(0,0,0,0.3)] rounded-lg p-10 max-w-2xl'>
+            <h1 
+              key={currentMessage} 
+              className='font-bold text-3xl text-black transition-opacity duration-1000 ease-in-out opacity-100 animate-fade'
+            >
+              {messages[currentMessage]}
             </h1>
-            <p className='text-gray-700 mb-6'>
-              At DemicsTech, we're harnessing the power of artificial intelligence to predict,
-              track, and combat infectious disease outbreaks across Nigeria. Our data-driven approach
-              is transforming public health interventions one community at a time.
-            </p>
-            <div className='flex gap-2 items-center font-bold text-md'>
+            <div className='flex gap-2 items-center font-bold text-md mt-6'>
               <h4 className='tracking-[.8em] text-[#1565C0]'>LEARN MORE</h4>
               <img src="/icon-arrow.svg" alt="arrow" />
             </div>
@@ -72,8 +93,8 @@ function Hero() {
         </div>
       </div>
 
-      {/* Mobile View: Keep original layout */}
-      <div className='lg:hidden w-full h-auto mx-auto  flex flex-wrap'>
+      {/* Mobile View (unchanged) */}
+      <div className='lg:hidden w-full h-auto mx-auto flex flex-wrap'>
         <div className='h-94 flex-[1_1_650px] w-full flex flex-col relative'>
           {isVideo ? (
             <video
@@ -101,7 +122,7 @@ function Hero() {
         </div>
 
         {/* Mobile Text content */}
-        <div className='flex-[1_1_350px] flex flex-col h-full '>
+        <div className='flex-[1_1_350px] flex flex-col h-full'>
           <div className='flex w-full h-full justify-center px-10 py-15 items-center'>
             <div>
               <h1 className='font-bold text-3xl pt-10 text-blue-950'>Leveraging AI to Combat Infectious Diseases in Nigeria</h1>

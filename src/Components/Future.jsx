@@ -3,11 +3,11 @@ import React, { useState, useEffect } from 'react';
 
 const Future = () => {
   const slides = [
-    { title: "Cholera Outbreaks", image: '/outreach.jpeg' },
-    { title: 'Yellow fever Outbreak', image: '/outreach2.jpeg' },
-    { title: 'Typhoid fever surveillance', image: '/outreach3.jpeg' },
-    { title: 'Lassa fever outbreak', image: '/outreach4.jpeg' },
-    { title: 'Meningitis Prediction', image: '/yellow.jpg' },
+    { title: "Cholera Outbreaks", image: '/video-village.jpg' },
+    { title: 'Yellow fever Outbreak', image: '/yellow-fever.jpg' },
+    { title: 'Typhoid fever surveillance', image: '/video-kids.jpg' },
+    { title: 'Lassa fever outbreak', image: '/village-raise.jpg' },
+    { title: 'Meningitis Prediction', image: '/meningitis.jpg' },
     { title: 'Malaria Eradication', image: '/tuberculosis.jpg' },
   ];
 
