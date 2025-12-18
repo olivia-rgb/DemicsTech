@@ -9,7 +9,7 @@ function Contact() {
         <div
           className="flex flex-col justify-center items-center w-full px-20 py-28 rounded-xl shadow-lg max-w-full max-md:px-4 max-md:py-10"
           style={{
-            background: "linear-gradient(135deg, #1565C0, black, #1565C0)", // Dark green to black gradient
+            background: "linear-gradient(135deg, #1565C0, #0D47A1, #1565C0)", // Dark green to black gradient
           }}
         >
           <div className="flex flex-col items-center w-full max-w-[833px]">

@@ -12,8 +12,8 @@ export default function Home() {
     <div className="bg-[]">
       <Navbar />
       <Hero />
-      <About />
       <Work />
+      <About />
       <Future />
       <Contact />
       <Footer />

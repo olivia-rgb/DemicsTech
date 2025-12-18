@@ -49,7 +49,7 @@ function About() {
   const current = diseases[currentIndex];
 
   return (
-    <div className="w-[90%] max-w-[1400px] mx-auto px-4 py-8">
+    <div className="w-[90%] max-w-full mx-auto px-4 pt-20 pb-10">
       <h1 className="text-[#1565C0] text-left md:text-center text-[2.5rem] md:text-[3.5rem] font-bold pb-6">
         What we do at DemicsTech
       </h1>
@@ -60,12 +60,12 @@ function About() {
           <img
             src={current.image}
             alt={current.name}
-            className="w-full h-50 rounded-md transition-all duration-500 object-cover"
+            className="w-full h-70 rounded-md transition-all duration-500 object-cover"
           />
-          <p className="text-[#1565C0] text-center text-2xl font-semibold pt-4">
+          <p className="text-[#1565C0] text-center text-4xl font-semibold pt-4">
             {current.name}
           </p>
-          <p className="text-center  max-w-[300px] mx-auto text-sm mt-2">{current.description}</p>
+          <p className="text-center  max-w-[500px] mx-auto text-xl mt-2">{current.description}</p>
         </div>
 
         {/* Static Right Image */}

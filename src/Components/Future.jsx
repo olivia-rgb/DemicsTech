@@ -30,10 +30,10 @@ const Future = () => {
   };
 
   return (
-    <div className="flex flex-col w-full min-h-screen">
-      <div className="pt-10 pb-5">
-        <h1 className='text-center text-4xl text-blue-950 font-bold'>Future Initiative</h1>
-        <p className='text-center text-2xl text-blue-950 font-bold mt-3'>We are developing new AI models to address:</p>
+    <div className="flex flex-col w-full h-[900px] ">
+      <div className="pt-20 pb-5">
+        <h1 className='text-center text-5xl text-[#1565C0]  font-bold'>Future Initiative</h1>
+        <p className='text-center text-2xl text-black font-bold mt-3'>We are developing new AI models to address:</p>
       </div>
       
       {/* Gallery Section */}
@@ -58,7 +58,7 @@ const Future = () => {
             
             {/* Title centered on the image */}
             <div className="absolute inset-0 flex items-center justify-center">
-              <h1 className="text-4xl font-bold text-white px-6 py-3 text-center">{slide.title}</h1>
+              <h1 className="text-5xl font-bold text-white px-6 py-3 text-center">{slide.title}</h1>
             </div>
           </div>
         ))}

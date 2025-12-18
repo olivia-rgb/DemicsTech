@@ -4,9 +4,9 @@ import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 function Footer() {
   return (
     <div
-      className="relative flex flex-col items-center justify-start w-full bg-cover bg-center bg-blue-950"
+      className="relative flex flex-col items-center justify-between w-full bg-cover bg-center bg-[#1565C0]"
     >
-      <div className="flex flex-col w-[80%]">
+      <div className="flex flex-col w-[40%]">
         <div className="flex w-full min-h-[1px] max-md:max-w-full" />
         <div className="flex flex-wrap items-center mt-24 w-full max-md:mt-10 max-md:mr-1.5 max-md:max-w-full">
           {/* Logo Section */}
